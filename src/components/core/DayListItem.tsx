@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Link } from "expo-router";
 
 const DayListItem = ({ item }: { item: number }) => {
   return (
-    <View style={styles.box}>
-      <Text style={styles.text}>{item}</Text>
-    </View>
+    <Link href={`/day${item}`} asChild>
+      <Pressable style={styles.box}>
+        <Text style={styles.text}>{item}</Text>
+      </Pressable>
+    </Link>
   );
 };
 
@@ -25,6 +28,6 @@ const styles = StyleSheet.create({
   text: {
     color: "#9b4521",
     fontSize: 70,
-    fontFamily: "RBold",
+    fontFamily: "RItalic",
   },
 });
