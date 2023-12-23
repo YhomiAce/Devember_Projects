@@ -1,10 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { FlatList, StyleSheet, View } from "react-native";
-import DayListItem from "../components/core/DayListItem";
-
+import DayListItem from "@components/core/DayListItem";
 
 export default function App() {
-    const numbersArray = Array.from({ length: 24 }, (_, index) => index + 1);
+  const numbersArray = Array.from({ length: 24 }, (_, index) => index + 1);
   return (
     <View style={styles.container}>
       <FlatList
