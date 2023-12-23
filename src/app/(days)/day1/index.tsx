@@ -1,14 +1,17 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 
-const DayOne = () => {
+const DayOneDetailScreen = () => {
   return (
     <View>
-      <Text>DayOne detail screen</Text>
+      <Stack.Screen options={{ title: "Day One" }} />
+      <Text style={{ fontSize: 30, fontFamily: "RBold" }}>
+        DayOne detail screen
+      </Text>
       <Link href={"/"}>Go Back</Link>
     </View>
   );
 };
 
-export default DayOne;
+export default DayOneDetailScreen;
